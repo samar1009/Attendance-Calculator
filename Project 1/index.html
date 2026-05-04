@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <span class="tag">University Tool</span>
+      <h1>Attendance<br>Calculator</h1>
+      <p>Track attendance across all your subjects in one place.</p>
+      <span class="min-badge">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M6 3.5v2.5l1.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        Minimum 75% required
+      </span>
+    </header>
+
+    <div id="subjects-list"></div>
+
+    <button class="add-btn" onclick="addSubject()">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Add Subject
+    </button>
+
+    <div class="summary" id="summary-panel">
+      <h2>Overall Summary</h2>
+      <div class="summary-grid">
+        <div class="summary-stat stat-safe">
+          <span class="val" id="sum-safe">0</span>
+          <span class="lbl">Safe ✓</span>
+        </div>
+        <div class="summary-stat stat-warn">
+          <span class="val" id="sum-warn">0</span>
+          <span class="lbl">Can Bunk ⚡</span>
+        </div>
+        <div class="summary-stat stat-danger">
+          <span class="val" id="sum-danger">0</span>
+          <span class="lbl">Need Classes ⚠️</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

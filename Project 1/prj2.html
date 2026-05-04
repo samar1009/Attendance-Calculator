@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance Calculator</title>
+    <link rel="stylesheet" href="prj2.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>📊 Attendance Calculator</h1>
+
+    <div class="input-group">
+        <label>Attended Classes</label>
+        <input type="number" id="attended" placeholder="e.g. 30">
+    </div>
+
+    <div class="input-group">
+        <label>Total Classes</label>
+        <input type="number" id="total" placeholder="e.g. 50">
+    </div>
+
+    <div class="input-group">
+        <label>Approved Leaves</label>
+        <input type="number" id="leaves" placeholder="e.g. 5">
+    </div>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+</div>
+
+<script src="prj2.js"></script>
+</body>
+</html>

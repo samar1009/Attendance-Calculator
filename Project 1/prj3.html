@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Advanced Attendance System</title>
+<link rel="stylesheet" href="prj3.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📊 Attendance System</h1>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <button onclick="showPage('subject')">Subjects</button>
+        <button onclick="showPage('bunk')">Bunk</button>
+        <button onclick="showPage('needed')">Needed</button>
+    </div>
+
+    <!-- SUBJECT PAGE -->
+    <div id="subject" class="page active">
+
+        <h2>Subject-wise Attendance</h2>
+
+        <table id="subjectTable">
+            <tr>
+                <th>Subject</th>
+                <th>Attended</th>
+                <th>Total</th>
+                <th>❌</th>
+            </tr>
+        </table>
+
+        <div class="btn-group">
+            <button onclick="addSubject()">➕ Add Subject</button>
+            <button onclick="calculateSubjects()">Calculate</button>
+        </div>
+
+        <div id="result"></div>
+        <div id="overall"></div>
+
+    </div>
+
+    <!-- BUNK PAGE -->
+    <div id="bunk" class="page">
+        <h2>Bunk Calculator</h2>
+
+        <input type="number" id="b_attended" placeholder="Attended Classes">
+        <input type="number" id="b_total" placeholder="Total Classes">
+
+        <button onclick="calculateBunk()">Check Bunk</button>
+
+        <div id="b_result"></div>
+    </div>
+
+    <!-- NEEDED PAGE -->
+    <div id="needed" class="page">
+        <h2>Classes Needed</h2>
+
+        <input type="number" id="n_attended" placeholder="Attended Classes">
+        <input type="number" id="n_total" placeholder="Total Classes">
+
+        <button onclick="calculateNeeded()">Calculate</button>
+
+        <div id="n_result"></div>
+    </div>
+
+</div>
+
+<script src="prj3.js"></script>
+</body>
+</html>
